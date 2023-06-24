@@ -1,0 +1,199 @@
+/* Material de referencia de Flexbox > https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+@charset 'UTF-8' ;
+
+:root {
+    --c_blue900 : #0D47A1 ;
+    --c_blue500 : #2196F3 ;
+    --c_blue100 : #BBDEFB ;
+
+    --c_cyan300 : #4DD0E1 ;
+
+    --c_white : #fff ;
+    --c_black : #000 ;
+}
+
+html {
+    font-size: 16px ;
+    line-height: 1.5 ;
+    /* font-family: 'OpenDyslexic', sans-serif; */
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400 ;
+}
+
+* {
+    margin: 0 ;
+    padding: 0 ;
+}
+
+.Header {
+    width: clamp( 420px , 100vw , 1600px ) ;
+    height: clamp( 75px , 10vh , 90px ) ;
+
+    background: hsla(192, 95%, 50%, 1);
+    background: linear-gradient(90deg, white 0%, var( --c_blue100 ) 50%, var( --c_blue900 ) 100%);
+    /* background: -moz-linear-gradient(90deg, hsla(192, 95%, 50%, 1) 0%, hsla(225, 89%, 47%, 1) 100%); */
+    /* background: -webkit-linear-gradient(90deg, hsla(192, 95%, 50%, 1) 0%, hsla(225, 89%, 47%, 1) 100%); */
+
+}
+
+.Header .section {
+    height: 100% ;
+    width: 100% ;
+
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-around ;
+    align-items: center ;
+
+}
+
+.Header .section .figure {}
+
+.Header .section .figure img {
+    scale: 1.5 ;
+}
+
+.Header .section .navbar {}
+
+.Header .section .navbar__menu {
+    display : inline-flex ;
+    gap : 2rem ;
+
+    list-style-type: none ;
+}
+
+.Header .section .cta {
+    display: inline-flex ;
+    gap : 1rem ;
+}
+
+.Header .section .cta__link {
+    padding : .5rem 2.5rem ;
+    border : 2px solid transparent ;
+
+    text-decoration: none;
+
+}
+
+.Header .section .cta__link:hover {
+    color : grey ;
+    border : 2px dotted blue ;
+}
+
+.Header .section .cta__email {
+    padding: .5rem 2.5rem ;
+
+    display: inline-flex ;
+    justify-content: center ;
+    align-items: center ;
+    gap : 1rem ;
+
+    border-radius: 2rem ;
+
+    text-decoration: none ;
+    color : black ;
+    background-color : white ;
+    font-weight: 600 ;
+}
+
+.Header .section .cta__email figure {
+    display : inline-flex ;
+}
+
+/* Comienzo Main */
+.Main {
+    height: 80vh ;
+    width: 100vw ;
+
+}
+
+.Main .section {
+    height: 100% ;
+    width: 100% ;
+}
+
+.Main .section .article {
+    height: inherit ;
+    width: inherit ;
+
+    display : flex ;
+    flex-flow : column nowrap ;
+    justify-content : center ;
+    align-items : center ;
+
+}
+
+.Main .section .article .menu {
+    width : clamp( 350px , 500px , 50vw ) ;
+    display : flex ;
+    flex-flow : column nowrap ;
+    gap : 2rem ;
+}
+
+.Main .section .article .menu__item {
+    list-style-type : none ;
+}
+
+.Main .section .article .menu__item--link {
+    width : 100% ;
+    padding : .5rem 0 ;
+
+    display: inline-flex ;
+    flex-flow: row nowrap ;
+    justify-content: center ;
+    align-items: center ;
+
+    border : 2px solid var( --c_blue500 ) ;
+    border-radius : 2rem ;
+
+    color : var( --c_black ) ;
+    text-decoration: none ;
+}
+
+.Main .section .article .menu__item--link:hover {
+    background-color: var( --c_blue500 );
+    box-shadow: 4px 4px var( --c_blue900 );
+    color : var( --c_white ) ;
+}
+
+.Main .section .article .menu__item--link .logo {
+    width: 35% ;
+
+    display : inline-flex ;
+    flex-flow: row nowrap ;
+    justify-content: space-between ;
+    align-items: center ;
+    gap : 1rem ;
+}
+
+
+.Main .section .article .menu__item--link .logo > * {
+    width: 50% ;
+    text-align: center ;
+}
+
+
+/* Comienzo Footer */
+.Footer {
+    height: clamp( 75px , 10vh , 90px ) ;
+    width: 100vw ;
+
+    color : var( --c_white ) ;
+
+    background-color : var( --c_blue900 ) ;
+}
+
+.Footer .section {
+    height: 100% ;
+    width: 100% ;
+}
+
+.Footer .section .article {
+    height: inherit ;
+    width: inherit ;
+
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-evenly ;
+    align-items: center ;
+}
